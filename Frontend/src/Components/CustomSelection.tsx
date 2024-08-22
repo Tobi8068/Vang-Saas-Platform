@@ -2,22 +2,26 @@ import React from 'react';
 
 interface CustomSectionProps {
   bgColor: string;
+  title: string;
   children?: React.ReactNode;
   onClick?: () => void;
 }
 
-const CustomSection: React.FC<CustomSectionProps> = ({ bgColor, children, onClick }) => {
+const CustomSection: React.FC<CustomSectionProps> = ({ bgColor, title, children, onClick }) => {
   return (
-    <div className={`relative flex items-center justify-between p-4 rounded-lg`} style={{ backgroundColor: bgColor }}>
-      {children}
-      <button 
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-lime-300 p-4 rounded-full focus:outline-none hover:bg-lime-400"
-        onClick={onClick}
-      >
-        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white">
-          <img src="/pictures/arrows.png" alt="Next" className="w-4 h-4"/>
-        </div>
-      </button>
+    <div className={`relative p-4 rounded-lg`} style={{ backgroundColor: bgColor }}>
+      <div className="flex items-center justify-between">
+        <h2 className="text-2xl font-bold text-black">{title}</h2>
+        <button
+          className="bg-lime-300 p-2 rounded-full hover:bg-lime-400"
+          onClick={onClick}
+        >
+          <img src="/pictures/arrow-icon.svg" alt="Next" className="w-4 h-4"/>
+        </button>
+      </div>
+      <div className="flex space-x-4 mt-4">
+        {children}
+      </div>
     </div>
   );
 };

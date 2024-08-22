@@ -1,11 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import LeftBar from './Components/LeftBar';
 import SearchBar from './Components/SearchBar';
 import CustomSection from './Components/CustomSelection';
 import Button from './Components/Button';
+import Card from './Components/Card';
 
 const App: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleOpenClick = () => {
+    console.log('Open button clicked');
+  };
+
+  const handleSlideClick = () => {
+    console.log('Slide to the next section');
+  };
 
   const sections = [
     {
@@ -28,7 +38,6 @@ const App: React.FC = () => {
         </div>
       ),
     },
-    // Add more sections as needed
   ];
 
   const handleSlide = () => {
@@ -49,12 +58,33 @@ const App: React.FC = () => {
           <SearchBar />
         </header>
 
-        <CustomSection bgColor="#c7e557" onClick={handleSlide}>
-          <div className="flex items-center justify-between w-full">
-            <div className="text-black text-2xl font-bold">{sections[currentIndex].title}</div>
-            {sections[currentIndex].content}
-          </div>
-        </CustomSection>
+        <CustomSection
+        bgColor="#c7e557"
+        title="Boston Venture Company Stack"
+        onClick={handleSlideClick}
+      >
+        <Card
+          title="SalesForce"
+          rating={4.8}
+          reviews="25,652+"
+          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+          onOpenClick={handleOpenClick}
+        />
+        <Card
+          title="SalesForce"
+          rating={4.8}
+          reviews="25,652+"
+          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+          onOpenClick={handleOpenClick}
+        />
+        <Card
+          title="SalesForce"
+          rating={4.8}
+          reviews="25,652+"
+          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+          onOpenClick={handleOpenClick}
+        />
+      </CustomSection>
       </div>
     </div>
   );
