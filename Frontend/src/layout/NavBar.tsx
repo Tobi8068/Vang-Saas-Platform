@@ -1,5 +1,5 @@
 import NavBarButton from "../components/NavBarButton";
-import SearchBar from "../components/SearchBar";
+import NavSearchBar from "../components/NavSearchBar";
 import HomeButton from "../components/HomeButton";
 import { useState } from "react";
 
@@ -11,11 +11,11 @@ function NavBar () {
     };
 
     return (
-        <div className="fixed flex justify-between mt-4 w-full">
+        <div className="fixed flex justify-between mt-4 w-11/12">
             <NavBarButton text="Discover" isSelected={ selectedButton === 'Discover' } onClick={() => handleButtonClick('Discover')} ></NavBarButton>
             <NavBarButton text="All Stacks" isSelected={ selectedButton === 'All Stacks' } onClick={() => handleButtonClick('All Stacks')}></NavBarButton>
             <NavBarButton text="My Stack" isSelected={ selectedButton === 'My Stack' } onClick={() => handleButtonClick('My Stack')}></NavBarButton>
-            <SearchBar></SearchBar>
+            <NavSearchBar></NavSearchBar>
             <HomeButton></HomeButton>
         </div>
     )

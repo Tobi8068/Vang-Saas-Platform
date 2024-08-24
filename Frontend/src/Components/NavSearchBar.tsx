@@ -1,6 +1,6 @@
 import SearchIcon from "../assets/img/search.png";
 
-function SearchBar(){
+function NavSearchBar(){
     return (
         <div className="rounded-[15px] flex items-center justify-between px-8 shadow-md w-1/2">
             <input className="focus:outline-none placeholder:italic placeholder:font-medium w-11/12" placeholder="I'm looking for..."></input>
@@ -9,4 +9,4 @@ function SearchBar(){
     )
 }
 
-export default SearchBar;
+export default NavSearchBar;
