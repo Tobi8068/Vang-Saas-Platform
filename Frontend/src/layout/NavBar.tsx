@@ -1,6 +1,6 @@
-import NavBarButton from "../component/NavBarButton";
-import NavSearchBar from "../component/NavSearchBar";
-import HomeButton from "../component/HomeButton";
+import NavBarButton from "../components/NavBarButton";
+import NavSearchBar from "../components/NavSearchBar";
+import HomeButton from "../components/HomeButton";
 import { useState } from "react";
 
 function NavBar () {
