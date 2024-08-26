@@ -1,6 +1,6 @@
-import ImgStarFilled from '../assets/svg/star_filled.svg';
-import ImgInfo from '../assets/svg/Info.svg';
-import ImgFavorite from '../assets/svg/favorite-icon.svg';
+import ImgStarFilled from 'assets/svg/star_filled.svg';
+import ImgInfo from 'assets/svg/Info.svg';
+import ImgFavorite from 'assets/svg/favorite-icon.svg';
 
 interface CardProps {
   title: string;

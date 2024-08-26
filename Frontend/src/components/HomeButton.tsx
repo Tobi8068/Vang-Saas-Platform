@@ -1,4 +1,4 @@
-import HomeIcon from "../assets/img/Home.png";
+import HomeIcon from "assets/img/Home.png";
 
 function HomeButton() {
     return (

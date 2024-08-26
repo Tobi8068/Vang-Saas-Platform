@@ -1,6 +1,6 @@
 
-import ImgPlus from '../assets/svg/Plus.svg';
-import SideBarButton from '../components/SideBarButton';
+import ImgPlus from 'assets/svg/Plus.svg';
+import SideBarButton from 'components/SideBarButton';
 
 import { useState } from 'react';
 
