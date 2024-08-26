@@ -7,6 +7,7 @@ import ImgThumbup from 'assets/svg/Thumbs up.svg';
 import ImgMenu from 'assets/svg/menu-icon.svg';
 import ImgStack from 'assets/svg/stack.svg'
 import ImgPlus from 'assets/svg/plus-icon.svg';
+import { IconThumbup } from "./Icons";
 
 interface CardProps {
   title: string;
@@ -23,6 +24,7 @@ function Card({ title, rating, reviews, description, onOpenClick, customFooter }
   const [showMoreButton, setShowMoreButton] = useState(false);
   const [showMore, setShowMore] = useState(false);
   const [showMenuButton, setShowMenuButton] = useState(false);
+  const [showThumbup, setShowThumbup] = useState(false);
 
   useEffect(() => {
     if (descriptionRef.current) {
@@ -39,6 +41,10 @@ function Card({ title, rating, reviews, description, onOpenClick, customFooter }
 
   const handleMenuButtonClick = () => {
     setShowMenuButton(true);
+  }
+
+  const handleThumbupClick = () => {
+    setShowThumbup(!showThumbup);
   }
 
   return (
@@ -92,10 +98,10 @@ function Card({ title, rating, reviews, description, onOpenClick, customFooter }
         ) : (
           <div className="flex gap-3">
             <button className="text-gray-500 hover:text-black">
-              <img src={ImgThumbup} alt="Star" className="w-5 h-5" />
+              <IconThumbup color={`${showThumbup ? "#1e1e1e" : 'none'}`} onClick={handleThumbupClick}></IconThumbup>
             </button>
             <button className="text-gray-500 hover:text-black">
-              <img src={ImgInfo} alt="Favorite" className="w-5 h-5" />
+              <img src={ImgInfo} alt="Star" className="w-5 h-5" />
             </button>
             <button className="text-gray-500 relative" onMouseEnter={handleMenuButtonClick} onMouseLeave={() => setShowMenuButton(false)}>
               <img src={ImgMenu} alt="Share" className="w-5 h-5" />
