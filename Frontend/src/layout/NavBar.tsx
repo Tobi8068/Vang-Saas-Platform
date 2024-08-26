@@ -14,12 +14,16 @@ function NavBar() {
     };
 
     return (
-        <div className="fixed right-1 flex justify-between mt-4 w-[94%]">
-            <Link to='/design'><NavBarButton text="Design" isSelected={selectedButton === 'Discover'} onClick={() => handleButtonClick('Discover')} ></NavBarButton></Link>
-            <Link to='/discover'><NavBarButton text="Discover" isSelected={selectedButton === 'All Stacks'} onClick={() => handleButtonClick('All Stacks')} ></NavBarButton></Link>
-            <Link to='/analytics'><NavBarButton text="Analytics" isSelected={selectedButton === 'My Stack'} onClick={() => handleButtonClick('My Stack')} ></NavBarButton></Link>
-            <NavSearchBar></NavSearchBar>
-            <HomeButton></HomeButton>
+        <div className="flex justify-between flex-col lg:flex-row gap-2 lg:gap-1 mt-0 md:mt-6 w-full sticky top-[87px] md:top-0">
+            <div className='flex justify-between w-full lg:w-[43%]'>
+                <Link to='/design'><NavBarButton text="Design" isSelected={selectedButton === 'Design'} onClick={() => handleButtonClick('Design')} ></NavBarButton></Link>
+                <Link to='/discover'><NavBarButton text="Discover" isSelected={selectedButton === 'Discover'} onClick={() => handleButtonClick('Discover')} ></NavBarButton></Link>
+                <Link to='/analytics'><NavBarButton text="Analytics" isSelected={selectedButton === 'Analytics'} onClick={() => handleButtonClick('Analytics')} ></NavBarButton></Link>
+            </div>
+            <div className='flex justify-between w-full lg:w-[53%] xl:w-[55.5%]'>
+                <NavSearchBar></NavSearchBar>
+                <HomeButton></HomeButton>
+            </div>
         </div>
     )
 }

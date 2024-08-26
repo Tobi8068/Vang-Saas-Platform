@@ -10,17 +10,15 @@ function MainApp() {
 
     return (
         <Router>
-            <div className="flex gap-5 pl-2 pt-2 height-full">
-                <NavBar></NavBar>
+            <div className="flex flex-col md:flex-row items-end md:items-start gap-2 md:gap-5 pl-2 pt-2 height-full">
                 <LeftSideBar></LeftSideBar>
-                <div className='flex flex-col justify-end w-full h-full'>
-                    <div className="mt-32 w-full">
-                        <Routes>
-                            <Route path="/design" element={<DesignPage />} />
-                            <Route path="/discover" element={<DiscoverPage />} />
-                            <Route path="/analytics" element={<AnalyticsPage />} />
-                        </Routes>
-                    </div>
+                <div className='flex flex-col justify-between w-full h-full'>
+                    <NavBar></NavBar>
+                    <Routes>
+                        <Route path="/design" element={<DesignPage />} />
+                        <Route path="/discover" element={<DiscoverPage />} />
+                        <Route path="/analytics" element={<AnalyticsPage />} />
+                    </Routes>
                 </div>
             </div>
         </Router>

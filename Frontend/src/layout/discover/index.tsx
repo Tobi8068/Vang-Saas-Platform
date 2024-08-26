@@ -3,7 +3,7 @@ import CustomCompanyStack from "./CustomCompanyStack";
 
 function DiscoverPage() {
     return (
-        <div className="flex flex-col gap-12 w-full mb-0">
+        <div className="flex flex-col gap-0 md:gap-12 w-full mb-0">
             <DiscoverBio></DiscoverBio>
             <CustomCompanyStack></CustomCompanyStack>
         </div>
