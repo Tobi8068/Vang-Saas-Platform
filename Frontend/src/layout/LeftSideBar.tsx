@@ -13,7 +13,7 @@ function LeftSideBar() {
   };
 
   return (
-    <div className="flex flex-col gap-4 items-center bg-white shadow-lg mt-8 rounded-full h-[35%]">
+    <div className="flex flex-row md:flex-col gap-4 items-center justify-end bg-white shadow-lg md:mt-8 rounded-full w-fit md:h-[35%] sticky top-2">
       <SideBarButton
         isSelected={selectedButton === 'stack'}
         onClick={() => handleButtonClick('stack')}
