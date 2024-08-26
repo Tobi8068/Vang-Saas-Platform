@@ -11,7 +11,7 @@ import ImgPlus from 'assets/svg/plus-icon.svg';
 interface CardProps {
   title: string;
   rating: number;
-  reviews: string;
+  reviews: number;
   description: string;
   onOpenClick: () => void;
   customFooter?: React.ReactNode;
@@ -22,6 +22,7 @@ function Card({ title, rating, reviews, description, onOpenClick, customFooter }
   const descriptionRef = useRef<HTMLDivElement | null>(null);
   const [showMoreButton, setShowMoreButton] = useState(false);
   const [showMore, setShowMore] = useState(false);
+  const [showMenuButton, setShowMenuButton] = useState(false);
 
   useEffect(() => {
     if (descriptionRef.current) {
@@ -35,6 +36,10 @@ function Card({ title, rating, reviews, description, onOpenClick, customFooter }
   const handleSeeMoreClick = () => {
     setShowMore(true);
   };
+
+  const handleMenuButtonClick = () => {
+    setShowMenuButton(true);
+  }
 
   return (
     <div className="bg-white shadow-lg rounded-lg p-4 max-w-md">
@@ -52,7 +57,7 @@ function Card({ title, rating, reviews, description, onOpenClick, customFooter }
               <span className="text-500 font-bold">{rating}</span>
               <img src={ImgStarFilled} alt="Rating" className="w-4 h-4" />
             </div>
-            <span className="text-gray-500 text-sm">{reviews}+</span>
+            <span className="text-gray-500 text-sm">{reviews.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}+</span>
           </div>
           <div className="bg-[#d9d9d9] w-[50px] h-[50px]"></div>
         </div>
@@ -92,8 +97,14 @@ function Card({ title, rating, reviews, description, onOpenClick, customFooter }
             <button className="text-gray-500 hover:text-black">
               <img src={ImgInfo} alt="Favorite" className="w-5 h-5" />
             </button>
-            <button className="text-gray-500 hover:text-black">
+            <button className="text-gray-500 relative" onMouseEnter={handleMenuButtonClick} onMouseLeave={() => setShowMenuButton(false)}>
               <img src={ImgMenu} alt="Share" className="w-5 h-5" />
+              <div className={`text-sm absolute bg-white flex flex-col shadow-slate-500 rounded-[5px] shadow-md top-4 left-[14px] w-32 ${showMenuButton ? 'block' : 'hidden'}`}>
+                <span className="border-b-2 hover:text-slate-700">Download</span>
+                <span className="border-b-2 hover:text-slate-700">Detailed View</span>
+                <span className="border-b-2 hover:text-slate-700">Leave a Review</span>
+                <span className="hover:text-slate-700">Report Bug</span>
+              </div>
             </button>
           </div>
         )}
