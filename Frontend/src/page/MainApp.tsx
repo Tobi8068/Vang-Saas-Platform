@@ -10,11 +10,11 @@ function MainApp() {
 
     return (
         <Router>
-            <div className="flex gap-5 p-2">
+            <div className="flex gap-5 pl-2 pt-2 height-full">
+                <NavBar></NavBar>
                 <LeftSideBar></LeftSideBar>
-                <div className='w-full'>
-                    <NavBar></NavBar>
-                    <div className="mt-24 w-full">
+                <div className='flex flex-col justify-end w-full h-full'>
+                    <div className="mt-32 w-full">
                         <Routes>
                             <Route path="/design" element={<DesignPage />} />
                             <Route path="/discover" element={<DiscoverPage />} />
