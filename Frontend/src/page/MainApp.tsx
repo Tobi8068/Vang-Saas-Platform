@@ -1,5 +1,6 @@
 import NavBar from "../layout/NavBar";
 import LeftSideBar from "../layout/LeftSideBar";
+// import CustomCompanyStack from "../layout/CustomCompanyStack";
 
 function MainApp() {
 
@@ -8,7 +9,7 @@ function MainApp() {
             <LeftSideBar></LeftSideBar>
             <div>
                 <NavBar></NavBar>
-
+                {/* <CustomCompanyStack></CustomCompanyStack> */}
             </div>
         </div>
     )
