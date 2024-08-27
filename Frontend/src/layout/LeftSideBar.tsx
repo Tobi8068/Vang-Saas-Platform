@@ -2,13 +2,14 @@
 import SideBarButton from 'components/SideBarButton';
 import ImgArrow from 'assets/svg/arrow-icon.svg';
 import ImgAvatar from 'assets/img/Avatar.png';
-import ImgPlus from 'assets/svg/Plus.svg';
+import { IconPlus } from 'components/Icons';
 
 import { useState } from 'react';
 
 function LeftSideBar() {
 
   const [selectedButton, setSelectedButton] = useState<string>('stack');
+  const [plusButtonHover, setPlusButtonHover] = useState(false);
 
   const handleButtonClick = (buttonName: string) => {
     setSelectedButton(buttonName);
@@ -35,8 +36,11 @@ function LeftSideBar() {
           type='cube'
           altText="Cube"
         />
-        <button className="p-1 sm:p-3 rounded-full bg-[#E1FF67] hover:bg-lime-300">
-          <img src={ImgPlus} alt="Plus" className='w-[42px] h-[42px]' />
+        <button className="p-1 sm:p-3 rounded-full bg-[#E1FF67] hover:bg-black" 
+          onMouseEnter={() => setPlusButtonHover(true)}
+          onMouseLeave={() => setPlusButtonHover(false)}
+          >
+          <IconPlus color={plusButtonHover ? 'white' : '#1e1e1e'}></IconPlus>
         </button>
       </div>
       <div className='flex flex-row items-center gap-3 md:gap-0 md:flex-col h-fit justify-between shadow-gray-500 shadow-md md:mb-4 rounded-full w-fit'>
