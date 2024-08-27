@@ -6,7 +6,7 @@ interface NavBarButtonProps {
 
 function NavBarButton( { text, isSelected, onClick } : NavBarButtonProps) {
     return (
-        <div className={`cursor-pointer text-lg font-bold 
+        <div className={`cursor-pointer text-[24px] font-bold 
             ${isSelected ? 'bg-[#1E1E1E]' : 'bg-white'}
             ${isSelected ? 'text-white' : 'text-[#1E1E1E]'} 
             ${isSelected ? 'hover:bg-[#1E1E1E]' : 'hover:bg-[#E1FF67]'}
