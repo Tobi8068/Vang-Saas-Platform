@@ -60,7 +60,7 @@ function CustomCompanyStack() {
         },
         {
             title: "HubSpot",
-            rating: 4.5,
+            rating: 4.7,
             reviews: 15432,
             description: `HubSpot is a developer and marketer of software products for inbound marketing, sales, and customer service.`
         },
