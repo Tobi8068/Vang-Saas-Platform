@@ -55,3 +55,27 @@ code {
 .spin-on-hover:hover {
   animation: spin 2s linear infinite;
 }
+
+/* Font */
+@font-face {
+  font-family: "avenirBlack";
+  font-weight: 900;
+  src: url('/src/assets/fonts/avenir/Avenir-Black.woff2') format('woff2');
+}
+@font-face {
+  font-family: "avenirLight";
+  font-weight: 300;
+  src: url('/src//assets/fonts/avenir/Avenir-Light.woff2') format('woff2');
+}
+@font-face {
+  font-family: "avenirRegular";
+  font-weight: 400;
+  src: url('/src/assets/fonts/avenir/Avenir-Roman.woff2') format('woff2');
+}
+@font-face {
+  font-family: "avenirThin";
+  font-weight: 100;
+  src: url("/src/assets/fonts/avenir/Avenir-Medium.woff2") format("woff2");
+}
+
+/* ------------------------------ */
