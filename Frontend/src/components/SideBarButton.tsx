@@ -47,10 +47,10 @@ function SideBarButton({ isSelected, onClick, type, altText }: SideBarButtonProp
             onMouseEnter={() => setShowText(true)}
             onMouseLeave={() => setShowText(false)}
         >
-            <div className='flex items-center justify-between relative text-white text-[24px] font-bold w-full h-full'>
+            <div className='flex items-center justify-between relative text-white text-[28px] font-bold w-full h-full'>
                 {getIcon()}
                 <div className={`flex items-center justify-center w-[60%] ${isSelected && showText ? "block" : 'hidden'}`}>
-                    <span>{getLabel()}</span>
+                    <span className='font-[avenirRegular]'>{getLabel()}</span>
                 </div>
             </div>
         </div>

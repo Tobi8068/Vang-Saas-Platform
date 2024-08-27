@@ -10,7 +10,7 @@ function MainApp() {
 
     return (
         <Router>
-            <div className="flex flex-col md:flex-row items-end md:items-start gap-2 md:gap-5 pl-2 pt-2 height-full">
+            <div className="bg-[#f5f4f4] flex flex-col md:flex-row items-end md:items-start gap-2 md:gap-5 pl-2 pt-2 height-full">
                 <LeftSideBar></LeftSideBar>
                 <div className='flex flex-col justify-between w-full h-full'>
                     <NavBar></NavBar>
