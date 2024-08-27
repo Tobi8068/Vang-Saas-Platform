@@ -10,7 +10,7 @@ interface SideBarButtonProps {
 function SideBarButton({ isSelected, onClick, type, altText }: SideBarButtonProps) {
     return (
         <button
-            className={`p-3 rounded-full ${isSelected ? 'bg-black hover:bg-gray-800' : 'hover:bg-gray-100'}`}
+            className={`p-1 md:p-3 rounded-full ${isSelected ? 'bg-black hover:bg-gray-800' : 'hover:bg-gray-100'}`}
             onClick={onClick}
         >
             {type === 'stack' && <IconStack color={isSelected ? 'white' : 'black'} />}

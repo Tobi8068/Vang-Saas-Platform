@@ -1,4 +1,5 @@
 import Card from "components/Card";
+import ImgSetting from 'assets/svg/Settings.svg';
 
 function CustomCompanyStack() {
 
@@ -88,6 +89,9 @@ function CustomCompanyStack() {
                     onOpenClick={handleClick}
                 />
             ))}
+            <button className="fixed right-3 bottom-3 sm:right-5 sm:bottom-5 bg-[#E1FF67] rounded-full p-3" title="Setting">
+                <img src={ImgSetting}></img>
+            </button>
         </div>
     )
 }
