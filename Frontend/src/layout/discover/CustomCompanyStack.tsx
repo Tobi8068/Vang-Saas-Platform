@@ -1,4 +1,5 @@
 import Card from "components/Card";
+import { IconSetting } from "components/Icons";
 
 function CustomCompanyStack() {
 
@@ -72,12 +73,8 @@ function CustomCompanyStack() {
         // Add more card data as needed
     ];
 
-    const handleClick = () => {
-
-    }
-
     return (
-        <div className="bg-[#e1e1e1] p-4 md:p-12 rounded-tl-[15px] flex flex-wrap gap-10 justify-around overflow-y-auto h-[620px]">
+        <div className="bg-[#e1e1e1] p-4 md:p-12 rounded-tl-[15px] flex flex-wrap gap-10 justify-around overflow-y-auto h-[660px]">
             {cardData.map((card, index) => (
                 <Card
                     key={index} // Use a unique key for each element
@@ -85,9 +82,11 @@ function CustomCompanyStack() {
                     rating={card.rating}
                     reviews={card.reviews}
                     description={card.description}
-                    onOpenClick={handleClick}
                 />
             ))}
+            <button className="fixed right-3 bottom-3 sm:right-5 sm:bottom-5 bg-[#E1FF67] rounded-full p-3 spin-on-hover" title="Setting">
+                <IconSetting></IconSetting>
+            </button>
         </div>
     )
 }
