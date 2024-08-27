@@ -60,7 +60,7 @@ function CustomCompanyStack() {
         },
         {
             title: "HubSpot",
-            rating: 4.5,
+            rating: 4.7,
             reviews: 15432,
             description: `HubSpot is a developer and marketer of software products for inbound marketing, sales, and customer service.`
         },
@@ -74,7 +74,7 @@ function CustomCompanyStack() {
     ];
 
     return (
-        <div className="bg-[#e1e1e1] p-4 md:p-12 rounded-tl-[15px] flex flex-wrap gap-10 justify-around overflow-y-auto h-[660px]">
+        <div className="bg-[#e1e1e1] p-4 md:p-12 rounded-tl-[15px] flex flex-wrap gap-10 justify-around overflow-y-auto h-[685px]">
             {cardData.map((card, index) => (
                 <Card
                     key={index} // Use a unique key for each element
