@@ -61,3 +61,12 @@ export function IconSetting({ color, onClick }: SVGProps) {
 
     )
 }
+
+export function IconPlus({ color, onClick }: SVGProps) {
+    return (
+        <svg width="42" height="42" viewBox="0 0 53 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26.5 9.86631V37.492M11.0417 23.6791H41.9583" stroke={color} stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+    )
+}
