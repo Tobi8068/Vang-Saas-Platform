@@ -56,7 +56,7 @@ function Card({ title, rating, reviews, description }: CardProps) {
 
       {/* Conditional rendering of the resizable and draggable popup */}
       {isOpenButtonClicked && (
-        <Rnd
+          <Rnd
           default={{
             x: 100,  // Initial X position of popup
             y: 100,  // Initial Y position of popup
