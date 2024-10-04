@@ -4,14 +4,14 @@ interface NavBarButtonProps {
     onClick: () => void;
 }
 
-function NavBarButton( { text, isSelected, onClick } : NavBarButtonProps) {
+function NavBarButton({ text, isSelected, onClick }: NavBarButtonProps) {
     return (
-        <div className={`cursor-pointer text-[24px] font-bold 
-            ${isSelected ? 'bg-[#1E1E1E]' : 'bg-white'}
-            ${isSelected ? 'text-white' : 'text-[#1E1E1E]'} 
-            ${isSelected ? 'hover:bg-[#1E1E1E]' : 'hover:bg-[#E1FF67]'}
-            font-[helvetica] w-[90%] py-3
-            rounded-[15px] shadow-gray-300 shadow-md`} onClick={onClick} title={text}>
+        <div className={`cursor-pointer text-[24px] font-normal w-[166px] h-[77px]
+            ${isSelected ? 'bg-white' : 'bg-[#F7C454]'}
+            ${isSelected ? 'text-black' : 'text-[#1E1E1E]'} 
+            ${isSelected ? 'hover:bg-[#F7C454]' : 'hover:bg-white'}
+            font-[helvetica] w-[90%] p-6
+            rounded-[20px] shadow-gray-300 shadow-md`} onClick={onClick} title={text}>
             {text}
         </div>
     )
