@@ -1,11 +1,11 @@
 import DiscoverBio from "./DiscoverBio";
-import CustomCompanyStack from "./CustomCompanyStack";
+import CustomCompanyStack1 from "./CustomCompanyStack1";
 
 function DiscoverPage() {
     return (
-        <div className="flex flex-col gap-0 md:gap-6 w-full mb-0">
+        <div className="">
             <DiscoverBio></DiscoverBio>
-            <CustomCompanyStack></CustomCompanyStack>
+            <CustomCompanyStack1></CustomCompanyStack1>
         </div>
     )
 }

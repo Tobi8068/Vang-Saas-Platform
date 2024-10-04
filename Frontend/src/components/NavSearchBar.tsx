@@ -4,9 +4,9 @@ import { useState } from "react";
 function NavSearchBar() {
     const [isFocused, setIsFocused] = useState(false);
     return (
-        <div className={`rounded-[15px] bg-white flex py-4 lg:py-3 items-center justify-between shadow-md w-10/12 sm:w-11/12 ${isFocused ? 'border-2 border-blue-500' : 'border-transparent'}`}>
-            <input className="text-lg font-medium focus:outline-none placeholder:italic placeholder:font-medium px-8 rounded-[15px] w-11/12 h-full" 
-                placeholder="I'm looking for..."
+        <div className={`rounded-[20px] bg-white flex py-6 lg:py-3 items-center h-[77px] justify-between shadow-md w-full ${isFocused ? 'border-2 border-blue-500' : 'border-2 border-transparent'}`}>
+            <input className="text-2xl font-normal focus:outline-none placeholder:font-medium px-8 rounded-[15px] w-11/12 h-full"
+                placeholder="Search here..."
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}>
             </input>

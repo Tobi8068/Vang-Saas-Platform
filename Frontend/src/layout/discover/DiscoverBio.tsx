@@ -1,12 +1,9 @@
-import ImgExpand from 'assets/svg/expand.svg';
 
 function DiscoverBio() {
     return (
-        <div className='flex flex-col items-center justify-center w-full mt-5 md:mt-0'>
-            <h1 className='text-[#757575] font-bold text-[28px]'>Hmm… so many CRMs, so little time. Let’s find the one that loves your leads as much as you do.</h1>
-            <div className='flex items-center h-[48px]'>
-                <img src={ImgExpand} alt='Expand' className='w-5 h-5 hover:cursor-pointer hover:mt-[-5px]'></img>
-            </div>
+        <div className='ml-6 mt-6'>
+            <div className='text-[#000000] font-semibold text-2xl text-left mb-4'>Hello, Anna!</div>
+            <div className='text-[#00000099] text-left text-[16px]'>Here's your overview of last week</div>
         </div>
     )
 }
